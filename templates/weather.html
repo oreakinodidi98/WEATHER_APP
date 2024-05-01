@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title}} Weather Page</title>
-    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    <title>{{ title }} Weather Page</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
 </head>
+
 
 <body>
    <h1>{{ title}} Weather</h1>
-   <p>{{ status }} and {{temp}} &deg; </p>
-   <p>Feels like {{ feels_like }} &deg; </p>
+   <p>{{ status }} and {{ temp }} &deg;</p>
+   <p>Feels like {{ feels_like }} &deg;</p>
 
 
    <form action="/weather">

@@ -19,8 +19,16 @@ def index():
 def get_weather():
     # get city from query string
     city = request.args.get('city')
+    
+    # check from an empty string or strings with only spaces
+    if not bool(city.strip()):
+        #default value for city of London if no city is provided or city is only spaces
+        city = "London"
     # get weather data
     weather_data = get_current_weather(city)
+    # City is not found by API
+    if not weather_data['cod'] == 200:
+        return render_template("city_not_found.html")
     # render weather.html template and pass weather data
     return render_template("weather.html",
                            title=weather_data["name"],

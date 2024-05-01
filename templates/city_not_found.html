@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Conditions Page</title>
+    <title>City Not Found Page</title>
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
 </head>
 
 <body>
-   <h1>Weather Conditions</h1>
+   <h1>City Not Found</h1>
+   <h2>Try Again?</h2>
    <form action="/weather">
          <label for="city">Enter City Name:</label>
          <input type="text" id="city" name="city" required >

@@ -33,7 +33,7 @@ venv/
 ENV/
 .venv
 .env
-
+__pycache__
 # IDEs
 .idea/
 .vscode/
