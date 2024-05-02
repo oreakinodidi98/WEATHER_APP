@@ -34,6 +34,7 @@
 - go to [openweathermap](https://home.openweathermap.org/api_keys)
 - get API key
 - put in .env file
+- go to [API Page](https://openweathermap.org/current#data)
 
 ## create folder structure
 
@@ -43,3 +44,14 @@
 - templates
   - index.html
   - This is homepage everyone sees, can click "!" then TAB to get a skeleton
+  
+## deploy to web
+
+- go to [render.com](https://render.com/)
+- connect github to acccount
+- build command: pip install -U pip && pip install -r requirements.txt
+  - to update pip and run requirements command
+- start command: python3 main.py
+- Advanced settings -> enviroment variable -> add API_key
+  - also add PYTHON_VERSION
+  - py -- version
