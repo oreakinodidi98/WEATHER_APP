@@ -9,8 +9,11 @@ load_dotenv()
 #get current weather function 
 def get_current_weather(city="London"):
     # have provide default value for city in case it is not provided
+    # Get API Key from environment variable
+    API_KEY = os.getenv('API_KEY')
     #create request URL
-    request_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv('WEATHER_API_KEY')}&units=metric"
+    request_url= f'https://api.openweathermap.org/data/2.5/weather?&appid={API_KEY}&q={city}&units=metric'
+    #request_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv('API_KEY')}&units=metric"
     #get weather data in JSON format
     weather_data = requests.get(request_url).json()
     #return weather data
